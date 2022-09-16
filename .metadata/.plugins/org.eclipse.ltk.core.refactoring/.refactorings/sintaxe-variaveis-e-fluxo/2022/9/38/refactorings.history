@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;fat&apos; in &apos;Fatorial.main(...)&apos; to &apos;n&apos;&#x0D;&#x0A;- Original project: &apos;sintaxe-variaveis-e-fluxo&apos;&#x0D;&#x0A;- Original element: &apos;Fatorial.main(String[]).fat&apos;&#x0D;&#x0A;- Renamed element: &apos;fat&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;fat&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Fatorial.java[Fatorial~main~\[QString;@fat!179!189!183!185!I!0!false" name="n" references="true" stamp="1663186425262" version="1.0"/>
+</session>

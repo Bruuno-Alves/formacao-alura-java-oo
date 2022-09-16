@@ -1,0 +1,22 @@
+
+public class Fatorial {
+
+	public static void main(String[] args) {
+
+		for (int mult = 0; mult <= 10; mult++) {
+			System.out.printf("Fatorial de %d! é : ", mult);
+			int fat = 1;
+			for (int n = 1; n <= mult; n++) {
+				fat *= n;
+				if (n < mult) {
+					System.out.print((mult + " x "));
+				} else {
+					System.out.print( mult + " = ");
+				}
+				
+			}
+			System.out.println(fat);
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+
+public class Fatorial {
+
+	public static void main(String[] args) {
+
+		for (int i = 0; i <= 10; i++) {
+			System.out.printf("Fatorial de %d! é : ", i);
+			for (int fat = 1; fat <= i; fat++) {
+				if (fat < i) {
+					System.out.print((i + " x "));
+				} else {
+					System.out.print( i + " = ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+}

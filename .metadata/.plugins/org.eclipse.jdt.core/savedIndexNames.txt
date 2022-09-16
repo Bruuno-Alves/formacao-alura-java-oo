@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\bruno\Documents\Curso Programação\Alura\formacao-java-oo\.metadata\.plugins\org.eclipse.jdt.core
+356374187.index
+2174185088.index
+1693911205.index
+2258321661.index
+1374762053.index
