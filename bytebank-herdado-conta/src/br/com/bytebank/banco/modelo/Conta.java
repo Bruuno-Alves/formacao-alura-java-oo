@@ -1,6 +1,12 @@
 package br.com.bytebank.banco.modelo;
 
-public abstract class Conta {
+/**
+ * Classe representa a moldura de uma conta.
+ * 
+ * @author bruno
+ *
+ */
+public abstract class Conta implements Comparable<Conta> {
 
 	protected double saldo;
 	private int agencia;
@@ -8,6 +14,12 @@ public abstract class Conta {
 	private Cliente titular;
 	private static int total;
 
+	/**
+	 * Construtor para inicializar o Objeto Conta a partir da agência e número.
+	 * 
+	 * @param agencia
+	 * @param numero
+	 */
 	public Conta(int agencia, int numero) {
 		Conta.total++;
 		this.agencia = agencia;
@@ -16,6 +28,12 @@ public abstract class Conta {
 
 	public abstract void deposita(double valor);
 
+	/**
+	 * Valor precisa ser maior do que o saldo.
+	 * 
+	 * @param valor
+	 * @throws SaldoInsuficienteException
+	 */
 	public void saca(double valor) throws SaldoInsuficienteException {
 		if (this.saldo < valor) {
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
@@ -67,5 +85,30 @@ public abstract class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Conta outra = (Conta) obj;
+		
+		if(this.agencia != outra.agencia) {
+			return false;
+		}
+		
+		if(this.numero != outra.numero) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	@Override
+	public int compareTo(Conta outra) {
+		
+		return Double.compare(this.saldo, outra.saldo);
+	}
 
+	@Override
+	public String toString() {
+		return "Agência: " + this.agencia + ", Numero: " + this.numero + ", Saldo: " + this.saldo;
+	}
 }
